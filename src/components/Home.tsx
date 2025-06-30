@@ -51,7 +51,7 @@ export default function Home() {
                         <p>Targeted campaigns that convert</p>
                     </div>
                     <div className="service-card">
-                        <div className="service-icon">📱</div>
+                        <div className="service-icon">📩</div> {/* Changed icon */}
                         <h3>Social Media & Email Marketing</h3>
                         <p>Boost your brand's online presence</p>
                     </div>
