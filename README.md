@@ -1,6 +1,6 @@
 # This project is webiste for Digital Marketing & PR ,web designing and web developing. 
 
-### Prerequisits
+### Prerequisits for running the project locally
 Make sure you have [git](https://git-scm.com) installed obviously.  
 Make sure you have [bun](https://bun.sh) installed.
 ## Steps to clone this repo and start working
