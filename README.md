@@ -37,4 +37,4 @@ Congratulations! You did it.
 
 Now open your browser and go to `htt://localhost:300` or simply press ctrl+click  on `http://localhost:3000` in your terminal. you will see something 
 
-![The first page right now](image.png)
+![The first page right now](image-2.png)
