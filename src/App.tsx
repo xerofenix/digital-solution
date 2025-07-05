@@ -14,9 +14,10 @@ function App() {
       {/* <div className="main-container"> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />}/>
+        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />}></Route>
 
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
       <Footer />
       {/* </div> */}
