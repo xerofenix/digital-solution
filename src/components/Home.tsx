@@ -25,46 +25,46 @@ export default function Home() {
                     {/* Development Services */}
                     <div className="service-card">
                         <div className="service-icon">🖥️</div>
-                        <h3>Website Development</h3>
+                        <h3><a href="/services">Website Development</a></h3>
                         <p>Custom, responsive websites that drive results</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📱</div>
-                        <h3>App Development</h3>
+                        <h3><a href="/services">App Development</a></h3>
                         <p>iOS & Android apps that engage users</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">🛒</div>
-                        <h3>E-commerce Solutions</h3>
+                        <h3><a href="/services">E-commerce Solutions</a></h3>
                         <p>Turn visitors into customers</p>
                     </div>
 
                     {/* Marketing Services */}
                     <div className="service-card">
                         <div className="service-icon">🔍</div>
-                        <h3>SEO Optimization</h3>
+                        <h3><a href="/services">SEO Optimization</a></h3>
                         <p>Dominate search engine rankings</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📢</div>
-                        <h3>Digital Advertising</h3>
+                        <h3><a href="/services">Digital Advertising</a></h3>
                         <p>Targeted campaigns that convert</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📩</div> {/* Changed icon */}
-                        <h3>Social Media & Email Marketing</h3>
+                        <h3><a href="/services">Social Media & Email Marketing</a></h3>
                         <p>Boost your brand's online presence</p>
                     </div>
 
                     {/* Design Services */}
                     <div className="service-card">
                         <div className="service-icon">🎨</div>
-                        <h3>UI/UX Design</h3>
+                        <h3><a href="/services">UI/UX Design</a></h3>
                         <p>Intuitive interfaces that delight users</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">✏️</div>
-                        <h3>Graphic Design</h3>
+                        <h3><a href="/services#ui-ux">Graphic Design</a></h3>
                         <p>Stunning visuals for your brand</p>
                     </div>
                 </div>
