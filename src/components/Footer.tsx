@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="footer-section">
             <h3 className="footer-heading">Legal</h3>
             <ul className="footer-links">
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/pp">Privacy Policy</a></li>
               <li><a href="/terms-of-service">Terms of Service</a></li>
               <li><a href="/cookie-policy">Cookie Policy</a></li>
             </ul>
