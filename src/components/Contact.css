@@ -2,7 +2,6 @@
     background-color: #f8fafc;
     padding: 2rem 1rem;
     min-height: calc(100vh - 70px - 60px);
-    /* Adjust based on header/footer height */
 }
 
 .contact-container {
@@ -16,7 +15,6 @@
 .contact-header {
     text-align: center;
     margin-top: 2rem;
-    /* Added margin-top for all views */
 }
 
 .contact-header h1 {
