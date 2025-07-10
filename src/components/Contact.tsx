@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Contact.css';
+import { HOME_URL } from '@/config';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ export default function Contact() {
         service: '',
         message: ''
     });
+
+    const [error, setError] = useState("")
 
     const services = [
         'Website Development',
@@ -30,18 +33,45 @@ export default function Contact() {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Form submission logic will be added later with FastAPI
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We will contact you soon.');
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            service: '',
-            message: ''
-        });
+
+        if (!Object.values(formData).every((field) => field)) {
+            setError("Please fill in all fields");
+            return;
+        }
+
+        const payload = {
+            ...formData
+        };
+
+        try {
+            const res = await fetch(`${HOME_URL}/api/contact`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+            console.log('Form submitted:', formData);
+
+            const data = await res.json();
+            if (data.success) {
+                alert('Thank you for your message! We will contact you soon.');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    service: '',
+                    message: ''
+                });
+                setError("");
+            } else {
+                setError(data.msg || "Failed to save education detials");
+            }
+        } catch (err) {
+            setError("Error Connecting to the server. Please try again later");
+        }
     };
 
     return (
