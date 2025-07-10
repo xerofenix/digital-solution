@@ -36,14 +36,17 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!Object.values(formData).every((field) => field)) {
-            setError("Please fill in all fields");
+        // Validate required fields (excluding phone since it's optional)
+        if (!formData.name || !formData.email || !formData.service || !formData.message || !formData.phone) {
+            alert("Please fill in all required fields");
             return;
         }
 
-        const payload = {
-            ...formData
-        };
+        // Validate email format
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            alert("Please enter a valid email address");
+            return;
+        }
 
         try {
             const res = await fetch(`${HOME_URL}/api/contact`, {
@@ -51,11 +54,15 @@ export default function Contact() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(payload),
+                body: JSON.stringify(formData),
             });
-            console.log('Form submitted:', formData);
+
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
 
             const data = await res.json();
+
             if (data.success) {
                 alert('Thank you for your message! We will contact you soon.');
                 setFormData({
@@ -67,10 +74,11 @@ export default function Contact() {
                 });
                 setError("");
             } else {
-                setError(data.msg || "Failed to save education detials");
+                setError(data.message || "Failed to submit the form");
             }
         } catch (err) {
-            setError("Error Connecting to the server. Please try again later");
+            console.error('Submission error:', err);
+            setError("Error connecting to the server. Please try again later");
         }
     };
 
@@ -110,7 +118,7 @@ export default function Contact() {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="phone">Phone Number</label>
+                        <label htmlFor="phone">Phone Number*</label>
                         <input
                             type="tel"
                             id="phone"
