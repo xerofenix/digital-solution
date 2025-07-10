@@ -1,5 +1,5 @@
 import './About.css';
-import saimImage from "../assets/saim.jpg"
+import saimImage from "../assets/sphot1.jpg"
 export default function About() {
     return (
         <div className="about-page">
