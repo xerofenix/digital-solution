@@ -42,24 +42,24 @@ export default function Home() {
                     {/* Marketing Services */}
                     <div className="service-card">
                         <div className="service-icon">🔍</div>
-                        <h3><a href="/services">SEO Optimization</a></h3>
+                        <h3><a href="/services#seo">SEO Optimization</a></h3>
                         <p>Dominate search engine rankings</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📢</div>
-                        <h3><a href="/services">Digital Advertising</a></h3>
+                        <h3><a href="/services#digital-ad">Digital Advertising</a></h3>
                         <p>Targeted campaigns that convert</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📩</div> {/* Changed icon */}
-                        <h3><a href="/services">Social Media & Email Marketing</a></h3>
+                        <h3><a href="/services#social-email-market">Social Media & Email Marketing</a></h3>
                         <p>Boost your brand's online presence</p>
                     </div>
 
                     {/* Design Services */}
                     <div className="service-card">
                         <div className="service-icon">🎨</div>
-                        <h3><a href="/services">UI/UX Design</a></h3>
+                        <h3><a href="/services#graphic-design">UI/UX Design</a></h3>
                         <p>Intuitive interfaces that delight users</p>
                     </div>
                     <div className="service-card">
