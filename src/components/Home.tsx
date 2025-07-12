@@ -1,5 +1,6 @@
 // src/components/Home.tsx
 import './Home.css';
+import Services from './Services';
 
 export default function Home() {
     return (
@@ -17,12 +18,12 @@ export default function Home() {
                 </div>
                 <div className="hero-overlay"></div>
             </section>
-
-            {/* Enhanced Services Section */}
+            <Services />
+            {/*
             <section className="services">
                 <h2>Our Comprehensive Services</h2>
                 <div className="service-grid">
-                    {/* Development Services */}
+                
                     <div className="service-card">
                         <div className="service-icon">🖥️</div>
                         <h3><a href="/services">Website Development</a></h3>
@@ -39,7 +40,7 @@ export default function Home() {
                         <p>Turn visitors into customers</p>
                     </div>
 
-                    {/* Marketing Services */}
+                    
                     <div className="service-card">
                         <div className="service-icon">🔍</div>
                         <h3><a href="/services#seo">SEO Optimization</a></h3>
@@ -51,12 +52,12 @@ export default function Home() {
                         <p>Targeted campaigns that convert</p>
                     </div>
                     <div className="service-card">
-                        <div className="service-icon">📩</div> {/* Changed icon */}
+                        <div className="service-icon">📩</div> 
                         <h3><a href="/services#social-email-market">Social Media & Email Marketing</a></h3>
                         <p>Boost your brand's online presence</p>
                     </div>
 
-                    {/* Design Services */}
+                   
                     <div className="service-card">
                         <div className="service-icon">🎨</div>
                         <h3><a href="/services#graphic-design">UI/UX Design</a></h3>
@@ -69,6 +70,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+*/}
 
             {/* Testimonial Section */}
             <section className="testimonial">
