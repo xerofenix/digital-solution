@@ -13,7 +13,7 @@ export default function Services() {
         {
             id: 'app-dev',
             title: "App Development",
-            description: "From concept to launch, we build native and cross-platform mobile applications for iOS and Android. Our apps are designed for optimal performance, intuitive navigation, and seamless integration with your existing systems.",
+            description: "From concept to launch, we build native and cross-platform mobile applications for Android. Our apps are designed for optimal performance, intuitive navigation, and seamless integration with your existing systems.",
             image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
         },
         {
