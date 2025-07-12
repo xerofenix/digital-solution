@@ -2,3 +2,10 @@ node_modules/
 /src/config.ts
 sphot1.jpg
 sphot2.jpg
+
+__pycache__
+contacts.db
+xvenv
+backend_xero_digital
+
+build/
