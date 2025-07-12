@@ -30,12 +30,12 @@ export default function Home() {
                     </div>
                     <div className="service-card">
                         <div className="service-icon">📱</div>
-                        <h3><a href="/services">App Development</a></h3>
+                        <h3><a href="/services#app-dev">App Development</a></h3>
                         <p>iOS & Android apps that engage users</p>
                     </div>
                     <div className="service-card">
                         <div className="service-icon">🛒</div>
-                        <h3><a href="/services">E-commerce Solutions</a></h3>
+                        <h3><a href="/services#e-com-solution">E-commerce Solutions</a></h3>
                         <p>Turn visitors into customers</p>
                     </div>
 
