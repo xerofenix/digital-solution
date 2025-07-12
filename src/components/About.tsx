@@ -1,5 +1,4 @@
 import './About.css';
-import saimImage from "../assets/sphot1.jpg"
 export default function About() {
     return (
         <div className="about-page">
@@ -59,8 +58,8 @@ export default function About() {
                         />
                     </div>
                 </section>
-
-                {/* Our Team */}
+                {/* 
+                Our Team
                 <section className="team-section">
                     <h2>Meet Our Team</h2>
                     <p className="team-subtitle">
@@ -113,7 +112,7 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-
+ */}
                 {/* Values */}
                 <section className="values-section">
                     <h2>Our Core Values</h2>
