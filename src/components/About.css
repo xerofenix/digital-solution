@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center;
+  background: url('../assets/pexels-divinetechygirl-1181263.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -211,56 +211,58 @@
   .about-hero {
     height: 300px;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-content p {
     font-size: 1.2rem;
   }
-  
+
   .about-section {
     flex-direction: column;
   }
-  
+
   .about-section.reverse {
     flex-direction: column;
   }
-  
-  .section-content, .section-image {
+
+  .section-content,
+  .section-image {
     width: 100%;
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
-  .about-page{
-     margin: 90px auto;
+  .about-page {
+    margin: 90px auto;
   }
+
   .about-hero {
     height: 250px;
   }
-  
+
   .hero-content h1 {
     font-size: 2rem;
   }
-  
+
   .hero-content p {
     font-size: 1rem;
   }
-  
+
   .about-container {
     padding: 2rem 1rem;
   }
-  
+
   .team-member {
     padding: 1.5rem;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
   }
