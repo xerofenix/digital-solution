@@ -9,7 +9,7 @@
     position: relative;
     height: 90vh;
     min-height: 600px;
-    background: url('../assets/premium_photo-1661877737564-3dfd7282efcb.avif') no-repeat center center;
+    background: url('../assets/pexels-harold-vasquez-853421-2653362.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -168,7 +168,8 @@
 }
 
 .testimonial blockquote {
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 100%;
     margin: 0 auto;
     font-size: 1.5rem;
     font-style: italic;
