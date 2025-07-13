@@ -6,6 +6,7 @@ sphot2.jpg
 __pycache__
 contacts.db
 xvenv
-backend_xero_digital
 
-build/
+xero-dig_back
+
+super_xero
