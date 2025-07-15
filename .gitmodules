@@ -1,0 +1,3 @@
+[submodule "super-digital-solution"]
+	path = super-digital-solution
+	url = git@github.com:xerofenix/super-digital-solution.git
