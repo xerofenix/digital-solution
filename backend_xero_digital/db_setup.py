@@ -3,7 +3,7 @@ import sqlite3
 
 # Database setup
 def get_db_connection():
-    conn = sqlite3.connect('contacts.db')
+    conn = sqlite3.connect('../super-digital-solution/super_back/admin.db')
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -17,7 +17,7 @@ def init_db():
             phone TEXT,
             service TEXT NOT NULL,
             message TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
     conn.commit()
