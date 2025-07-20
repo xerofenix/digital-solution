@@ -1,4 +1,4 @@
-# This project is webiste for Digital Marketing & PR ,web designing and web developing. 
+# This project is webiste for Digital Marketing & PR ,web designing and web developing.
 
 # Project Directory Structure
 
@@ -29,7 +29,7 @@ xerow-digital/
 │   │   │   ├── Services.css
 │   │   │   ├── Services.tsx
 │   │   ├── App.tsx
-│   │   ├── config.tsconfig
+│   │   ├── config.ts
 │   │   ├── index.css      # css for index.html
 │   │   ├── index.html     # main html file having root element
 │   │   ├── index.tsx      # server
@@ -76,7 +76,7 @@ xerow-digital/
 
 
 ### Prerequisits for running the project locally
-Make sure you have [git](https://git-scm.com) installed obviously.  
+Make sure you have [git](https://git-scm.com) installed obviously.
 Make sure you have [bun](https://bun.sh) installed.
 ## Steps to clone this repo and start working
 
@@ -105,13 +105,13 @@ Now run the project. Open a termianl in the same directory and enter
 ```bash
 bun run dev
 ```
-You will see the output   
-`$ bun --hot src/index.tsx`  
-`🚀 Server running at http://localhost:3000/`  
+You will see the output
+`$ bun --hot src/index.tsx`
+`🚀 Server running at http://localhost:3000/`
 `Bundled page in 43ms: src/index.html`
 
 Congratulations! You did it.
 
-Now open your browser and go to `htt://localhost:300` or simply press ctrl+click  on `http://localhost:3000` in your terminal. you will see something 
+Now open your browser and go to `htt://localhost:300` or simply press ctrl+click  on `http://localhost:3000` in your terminal. you will see something
 
 ![The first page right now](front_digital_solution/image-3.png)
