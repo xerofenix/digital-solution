@@ -4,7 +4,7 @@ export default function About() {
         <div className="about-page">
             {/* Hero Section */}
             <section className="about-hero">
-                <div className="hero-overlay"></div>
+                <div className="-about-hero-overlay"></div>
                 <div className="hero-content">
                     <h1>About Xerow Digital</h1>
                     <p>Driving digital transformation since 2018</p>
