@@ -1,21 +1,20 @@
-# Use the official Bun image
-FROM oven/bun:latest
+# Use public Bun image from Docker Hub
+FROM docker.io/oven/bun:latest
 
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY front_digital_solution/package.json .
-COPY front_digital_solution/tsconfig.json .
+COPY package.json .
+COPY tsconfig.json .
+
 RUN bun install
 
-# Copy the rest of the application code
-COPY front_digital_solution/ .
+# Copy all source files
+COPY . .
 
-# Expose the port the app runs on
+# Expose port 3000
 EXPOSE 3000
 
-# Command to run the application in development mode
-RUN bun run build
-
-CMD ["bun", "run", "start"]  # or bun serve ./dist
+# Start in development mode
+CMD ["bun", "run", "dev"]
