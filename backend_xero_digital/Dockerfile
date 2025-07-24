@@ -1,19 +1,17 @@
-# Use the official Python image
+# backend_xero_digital/Dockerfile
 FROM python:3.9-slim
 
-# Set the working directory
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
-COPY backend_xero_digital/requirements.txt .
+# Copy requirements.txt relative to context root (current folder)
+COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
-COPY backend_xero_digital/ .
+# Copy all source code relative to context root
+COPY . .
 
-# Expose the port the app runs on
 EXPOSE 8000
 
-# Command to run the application
-# CMD ["fastapi run", "main.py"]
+# Run FastAPI app using uvicorn (ensure uvicorn in requirements)
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
