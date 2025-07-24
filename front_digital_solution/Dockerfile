@@ -16,4 +16,6 @@ COPY front_digital_solution/ .
 EXPOSE 3000
 
 # Command to run the application in development mode
-CMD ["bun", "run", "dev"]
+RUN bun run build
+
+CMD ["bun", "run", "start"]  # or bun serve ./dist
