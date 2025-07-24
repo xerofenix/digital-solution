@@ -3,28 +3,24 @@ version: '3.8'
 services:
   backend_xero_digital:
     build:
-      context: .
-      dockerfile: backend_xero_digital/Dockerfile
+      context: ./backend_xero_digital
     ports:
       - "8000:8000"
 
   front_digital_solution:
     build:
-      context: .
-      dockerfile: front_digital_solution/Dockerfile
+      context: ./front_digital_solution
     ports:
       - "3000:3000"
 
   super_back:
     build:
-      context: .
-      dockerfile: super-digital-solution/super_back/Dockerfile
+      context: ./super-digital-solution/super_back
     ports:
       - "6600:6600"
 
   super_front:
     build:
-      context: .
-      dockerfile: super-digital-solution/super_front/Dockerfile
+      context: ./super-digital-solution/super_front
     ports:
       - "5500:5500"
