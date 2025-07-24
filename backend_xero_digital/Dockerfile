@@ -15,4 +15,5 @@ COPY backend_xero_digital/ .
 EXPOSE 8000
 
 # Command to run the application
-CMD ["fastapi run", "main.py"]
+# CMD ["fastapi run", "main.py"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
