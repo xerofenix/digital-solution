@@ -6,14 +6,18 @@ from typing import Optional
 from contextlib import asynccontextmanager
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-
 import db_setup as db
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Initialize limiter
 limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(
-    docs_url=None,  # Disable docs (Swagger UI)
-    redoc_url=None,  # Disable redoc
+    docs_url=None,
+    redoc_url=None,
     openapi_url=None
 )
 app.state.limiter = limiter
@@ -21,9 +25,9 @@ app.state.limiter = limiter
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[ "http://localhost:3000"],
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
-    allow_methods=["POST","GET"],     # "GET,POST,PUT,OPTIONS, DELETE"
+    allow_methods=["POST", "GET"],
     allow_headers=["Content-Type"],
 )
 
@@ -35,18 +39,10 @@ class ContactForm(BaseModel):
     service: str
     message: str
 
-
-
 # Initialize database on startup
 @app.on_event("startup")
 def startup():
     db.init_db()
-
-# @asynccontextmanager
-# async def lifespan(app:FastAPI):
-#     db.init_db()
-#     yield
-
 
 # API endpoint
 @app.post("/api/contact")
@@ -61,12 +57,12 @@ async def submit_contact_form(
 
         cursor.execute('''
             INSERT INTO contacts (name, email, phone, service, message)
-            VALUES (?, ?, ?, ?, ?)
+            VALUES (%s, %s, %s, %s, %s)
+            RETURNING id
         ''', (contact.name, contact.email, contact.phone, contact.service, contact.message))
 
+        contact_id = cursor.fetchone()['id']
         conn.commit()
-        contact_id = cursor.lastrowid
-        conn.close()
 
         return {
             "success": True,
@@ -75,7 +71,11 @@ async def submit_contact_form(
         }
 
     except Exception as e:
+        conn.rollback()
         raise HTTPException(
             status_code=500,
             detail=f"Error submitting form: {str(e)}"
         )
+    finally:
+        cursor.close()
+        conn.close()
