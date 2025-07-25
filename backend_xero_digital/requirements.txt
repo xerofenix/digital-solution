@@ -1,3 +1,5 @@
 fastapi[standard]
 slowapi
 pydantic
+psycopg2-binary
+python-dotenv
